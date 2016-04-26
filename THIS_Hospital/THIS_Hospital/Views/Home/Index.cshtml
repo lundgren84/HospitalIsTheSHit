@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@*<li>@Html.ActionLink("Patient", "Index", "Patients")</li>
+    <li>@Html.ActionLink("Staff", "Index", "Staffs")</li>
+    <li>@Html.ActionLink("Proffesion", "Index", "Proffesions")</li>
+    <li>@Html.ActionLink("Treatment", "Index", "Treatments")</li>
+    <li>@Html.ActionLink("TreatmentStatus", "Index", "TreatmentStatus")</li>
+    <li>@Html.ActionLink("WhatsDone", "Index", "WhatsDones")</li>
+    <li>@Html.ActionLink("Cause", "Index", "Causes")</li>
+    <li>@Html.ActionLink("CauseType", "Index", "CauseTypes")</li>
+    <li>@Html.ActionLink("Drug", "Index", "Drugs")</li>
+    <li>@Html.ActionLink("DrugType", "Index", "DrugTypes")</li>
+    <li>@Html.ActionLink("Prescription", "Index", "Prescriptions")</li>
+    <li>@Html.ActionLink("Room", "Index", "Rooms")</li>
+    <li>@Html.ActionLink("Department", "Index", "Departments")</li>*@
+<div class="jumbotron">
+    <h1>HOSPITAL</h1>
+    <p class="lead">THIS DATABASE IS PRO!</p>
+    <p><a href="http://google.se" class="btn btn-primary btn-lg">Google &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Stuff</h2>
+        <p>
+            @Html.ActionLink("Patient", "Index", "Patients")
+            @Html.ActionLink("Staff", "Index", "Staffs")
+            @Html.ActionLink("Proffesion", "Index", "Proffesions")
+            @Html.ActionLink("Treatment", "Index", "Treatments")
+        </p>
+        @*<p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>*@
+    </div>
+    <div class="col-md-4">
+        <h2>More Stuff</h2>
+        <p>
+            @Html.ActionLink("TreatmentStatus", "Index", "TreatmentStatus")
+            @Html.ActionLink("WhatsDone", "Index", "WhatsDones")
+            @Html.ActionLink("Cause", "Index", "Causes")
+            @Html.ActionLink("CauseType", "Index", "CauseTypes")
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>More "More Stuff"</h2>
+        <p>
+            @Html.ActionLink("Drug", "Index", "Drugs")
+            @Html.ActionLink("DrugType", "Index", "DrugTypes")
+            @Html.ActionLink("Prescription", "Index", "Prescriptions")
+            @Html.ActionLink("Room", "Index", "Rooms")
+            @Html.ActionLink("Department", "Index", "Departments")
+        </p>
+    </div>
+</div>
