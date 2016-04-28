@@ -45,7 +45,7 @@ namespace THIS_Hospital
         [Column(Order = 0)]
         [Display(Name = "Patient Name")]
         public string Name
-        { get { return LName + "," + FName; } }
+        { get { return LName + ", " + FName; } }
 
         //-----------F-Keys------------
         public int? StaffRefID { get; set; }

@@ -17,6 +17,7 @@ namespace THIS_Hospital
         }
 
         public int DrugTypeID { get; set; } //Prymary key
+        [Display(Name = "Drug Type")]
         public string Desecription { get; set; }
 
 

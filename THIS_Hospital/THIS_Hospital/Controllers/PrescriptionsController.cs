@@ -40,8 +40,8 @@ namespace THIS_Hospital.Controllers
         public ActionResult Create()
         {
             ViewBag.DrugRefID = new SelectList(db.Drugs, "DrugID", "Description");
-            ViewBag.PatientRefID = new SelectList(db._Patient, "PatientID", "FName");
-            ViewBag.StaffRefID = new SelectList(db._Staff, "StaffID", "FName");
+            ViewBag.PatientRefID = new SelectList(db._Patient, "PatientID", "Name");
+            ViewBag.StaffRefID = new SelectList(db._Staff, "StaffID", "Name");
             return View();
         }
 
@@ -50,7 +50,7 @@ namespace THIS_Hospital.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "PrescriptionID,Date,PatientRefID,StaffRefID,DrugRefID")] Prescription prescription)
+        public ActionResult Create([Bind(Include = "PrescriptionID,Date,Patient,Staff,Drug")] Prescription prescription)
         {
             if (ModelState.IsValid)
             {
@@ -60,8 +60,8 @@ namespace THIS_Hospital.Controllers
             }
 
             ViewBag.DrugRefID = new SelectList(db.Drugs, "DrugID", "Description", prescription.DrugRefID);
-            ViewBag.PatientRefID = new SelectList(db._Patient, "PatientID", "FName", prescription.PatientRefID);
-            ViewBag.StaffRefID = new SelectList(db._Staff, "StaffID", "FName", prescription.StaffRefID);
+            ViewBag.PatientRefID = new SelectList(db._Patient, "PatientID", "Name", prescription.PatientRefID);
+            ViewBag.StaffRefID = new SelectList(db._Staff, "StaffID", "Name", prescription.StaffRefID);
             return View(prescription);
         }
 
@@ -78,8 +78,8 @@ namespace THIS_Hospital.Controllers
                 return HttpNotFound();
             }
             ViewBag.DrugRefID = new SelectList(db.Drugs, "DrugID", "Description", prescription.DrugRefID);
-            ViewBag.PatientRefID = new SelectList(db._Patient, "PatientID", "FName", prescription.PatientRefID);
-            ViewBag.StaffRefID = new SelectList(db._Staff, "StaffID", "FName", prescription.StaffRefID);
+            ViewBag.PatientRefID = new SelectList(db._Patient, "PatientID", "Name", prescription.PatientRefID);
+            ViewBag.StaffRefID = new SelectList(db._Staff, "StaffID", "Name", prescription.StaffRefID);
             return View(prescription);
         }
 
@@ -88,7 +88,7 @@ namespace THIS_Hospital.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "PrescriptionID,Date,PatientRefID,StaffRefID,DrugRefID")] Prescription prescription)
+        public ActionResult Edit([Bind(Include = "PrescriptionID,Date,Patient,Staff,Drug")] Prescription prescription)
         {
             if (ModelState.IsValid)
             {
@@ -97,8 +97,8 @@ namespace THIS_Hospital.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.DrugRefID = new SelectList(db.Drugs, "DrugID", "Description", prescription.DrugRefID);
-            ViewBag.PatientRefID = new SelectList(db._Patient, "PatientID", "FName", prescription.PatientRefID);
-            ViewBag.StaffRefID = new SelectList(db._Staff, "StaffID", "FName", prescription.StaffRefID);
+            ViewBag.PatientRefID = new SelectList(db._Patient, "PatientID", "Name", prescription.PatientRefID);
+            ViewBag.StaffRefID = new SelectList(db._Staff, "StaffID", "Name", prescription.StaffRefID);
             return View(prescription);
         }
 

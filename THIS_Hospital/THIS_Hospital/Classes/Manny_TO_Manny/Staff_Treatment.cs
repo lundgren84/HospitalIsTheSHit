@@ -9,17 +9,19 @@ namespace THIS_Hospital.Classes.Manny_TO_Manny
 {
     public class Staff_Treatment
     {
-        [Key,Column(Order =0)]
-        public int StaffID { get; set; }
-        [Key, Column(Order = 1)]
-        public int TreatmentID { get; set; }
+        [Key, Column(Order = 0)]
+        public int StaffID { get; set; }    
+        public virtual Staff Staff { get; set; }
 
-        public int? TreatmentRefID { get; set; }
-        [ForeignKey(name: "TreatmentRefID")]
+
+        [Key, Column(Order = 1)]
+        public int TreatmentID { get; set; }      
         public virtual Treatment Treatment { get; set; }
 
-        public int? StaffRefID { get; set; }
-        [ForeignKey(name: "StaffRefID")]
-        public virtual Staff Staff { get; set; }
+ 
+
+      
+
+       
     }
 }

@@ -17,7 +17,8 @@ namespace THIS_Hospital.Controllers
         // GET: Rooms
         public ActionResult Index()
         {
-            return View(db.Rooms.ToList());
+            var rooms = db.Rooms.Include(r => r.Department);
+            return View(rooms.ToList());
         }
 
         // GET: Rooms/Details/5
@@ -38,6 +39,7 @@ namespace THIS_Hospital.Controllers
         // GET: Rooms/Create
         public ActionResult Create()
         {
+            ViewBag.DepartmentRefID = new SelectList(db.Departments, "DepartmentID", "DepartmentName");
             return View();
         }
 
@@ -46,7 +48,7 @@ namespace THIS_Hospital.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "RoomID,RoomNr,Avalible")] Room room)
+        public ActionResult Create([Bind(Include = "RoomID,RoomNr,Avalible,DepartmentRefID")] Room room)
         {
             if (ModelState.IsValid)
             {
@@ -55,6 +57,7 @@ namespace THIS_Hospital.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.DepartmentRefID = new SelectList(db.Departments, "DepartmentID", "DepartmentName", room.DepartmentRefID);
             return View(room);
         }
 
@@ -70,6 +73,7 @@ namespace THIS_Hospital.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.DepartmentRefID = new SelectList(db.Departments, "DepartmentID", "DepartmentName", room.DepartmentRefID);
             return View(room);
         }
 
@@ -78,7 +82,7 @@ namespace THIS_Hospital.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "RoomID,RoomNr,Avalible")] Room room)
+        public ActionResult Edit([Bind(Include = "RoomID,RoomNr,Avalible,DepartmentRefID")] Room room)
         {
             if (ModelState.IsValid)
             {
@@ -86,6 +90,7 @@ namespace THIS_Hospital.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.DepartmentRefID = new SelectList(db.Departments, "DepartmentID", "DepartmentName", room.DepartmentRefID);
             return View(room);
         }
 

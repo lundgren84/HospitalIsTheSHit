@@ -19,6 +19,8 @@ namespace THIS_Hospital
         public bool Avalible { get; set; }
 
         //------------------------------------------------  
+        public int? DepartmentRefID { get; set; }
+        [ForeignKey(name: "DepartmentRefID")]
         public virtual Department Department { get; set; }
 
     }

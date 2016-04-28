@@ -14,6 +14,7 @@ namespace THIS_Hospital
         [Required]
         public int PrescriptionID { get; set; }// Primary key  
         [Required]
+        [DataType(DataType.Date)]
         public DateTime Date { get; set; }
 
         public int? PatientRefID { get; set; }

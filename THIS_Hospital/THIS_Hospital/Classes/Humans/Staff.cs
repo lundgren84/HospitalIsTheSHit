@@ -33,7 +33,7 @@ namespace THIS_Hospital
         public DateTime HireDate { get; set; }
         [Display(Name = "Staff Name")]
         public string Name
-        { get { return LName + "," + FName; } }
+        { get { return LName + ", " + FName; } }
 
         // ----------F-Keys------------
         public int? ProffesionRefID { get; set; }

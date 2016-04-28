@@ -40,8 +40,8 @@ namespace THIS_Hospital.Controllers
         public ActionResult Create()
         {
             ViewBag.CauseRefID = new SelectList(db._Cause, "CauseID", "CauseName");
-            ViewBag.RoomRefID = new SelectList(db.Rooms, "RoomID", "RoomID");
-            ViewBag.StaffRefID = new SelectList(db._Staff, "StaffID", "FName");
+            ViewBag.RoomRefID = new SelectList(db.Rooms, "RoomID", "RoomNr");
+            ViewBag.StaffRefID = new SelectList(db._Staff, "StaffID", "Name");
             return View();
         }
 
@@ -60,8 +60,8 @@ namespace THIS_Hospital.Controllers
             }
 
             ViewBag.CauseRefID = new SelectList(db._Cause, "CauseID", "CauseName", patient.CauseRefID);
-            ViewBag.RoomRefID = new SelectList(db.Rooms, "RoomID", "RoomID", patient.RoomRefID);
-            ViewBag.StaffRefID = new SelectList(db._Staff, "StaffID", "FName", patient.StaffRefID);
+            ViewBag.RoomRefID = new SelectList(db.Rooms, "RoomID", "RoomNr", patient.RoomRefID);
+            ViewBag.StaffRefID = new SelectList(db._Staff, "StaffID", "Name", patient.StaffRefID);
             return View(patient);
         }
 
@@ -78,8 +78,8 @@ namespace THIS_Hospital.Controllers
                 return HttpNotFound();
             }
             ViewBag.CauseRefID = new SelectList(db._Cause, "CauseID", "CauseName", patient.CauseRefID);
-            ViewBag.RoomRefID = new SelectList(db.Rooms, "RoomID", "RoomID", patient.RoomRefID);
-            ViewBag.StaffRefID = new SelectList(db._Staff, "StaffID", "FName", patient.StaffRefID);
+            ViewBag.RoomRefID = new SelectList(db.Rooms, "RoomID", "RoomNr", patient.RoomRefID);
+            ViewBag.StaffRefID = new SelectList(db._Staff, "StaffID", "Name", patient.StaffRefID);
             return View(patient);
         }
 
@@ -97,8 +97,8 @@ namespace THIS_Hospital.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.CauseRefID = new SelectList(db._Cause, "CauseID", "CauseName", patient.CauseRefID);
-            ViewBag.RoomRefID = new SelectList(db.Rooms, "RoomID", "RoomID", patient.RoomRefID);
-            ViewBag.StaffRefID = new SelectList(db._Staff, "StaffID", "FName", patient.StaffRefID);
+            ViewBag.RoomRefID = new SelectList(db.Rooms, "RoomID", "RoomNr", patient.RoomRefID);
+            ViewBag.StaffRefID = new SelectList(db._Staff, "StaffID", "Name", patient.StaffRefID);
             return View(patient);
         }
 
