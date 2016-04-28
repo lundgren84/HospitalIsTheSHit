@@ -42,9 +42,10 @@ namespace THIS_Hospital
         public DateTime CeckInHospital { get; set; }
         //Full name
         [Required]
-        [Display(Name = "Full Name")]
+        [Column(Order = 0)]
+        [Display(Name = "Patient Name")]
         public string Name
-        { get { return FName + " " + LName; }  }
+        { get { return LName + "," + FName; } }
 
         //-----------F-Keys------------
         public int? StaffRefID { get; set; }

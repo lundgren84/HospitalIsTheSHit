@@ -31,9 +31,9 @@ namespace THIS_Hospital
         [Display(Name = "Hire date")]
         [DataType(DataType.Date)]
         public DateTime HireDate { get; set; }
-        [Display(Name = "Full Name")]
+        [Display(Name = "Staff Name")]
         public string Name
-        { get { return FName + " " + LName; } }
+        { get { return LName + "," + FName; } }
 
         // ----------F-Keys------------
         public int? ProffesionRefID { get; set; }
