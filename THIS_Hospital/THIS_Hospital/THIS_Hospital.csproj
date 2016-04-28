@@ -185,8 +185,10 @@
     <Compile Include="Controllers\PatientsController.cs" />
     <Compile Include="Controllers\PrescriptionsController.cs" />
     <Compile Include="Controllers\ProffesionsController.cs" />
+    <Compile Include="Controllers\Proffesion_CauseTypeController.cs" />
     <Compile Include="Controllers\RoomsController.cs" />
     <Compile Include="Controllers\StaffsController.cs" />
+    <Compile Include="Controllers\Staff_TreatmentController.cs" />
     <Compile Include="Controllers\TreatmentsController.cs" />
     <Compile Include="Controllers\TreatmentStatusController.cs" />
     <Compile Include="Controllers\WhatsDonesController.cs" />
@@ -341,6 +343,16 @@
     <Content Include="Views\Rooms\Details.cshtml" />
     <Content Include="Views\Rooms\Edit.cshtml" />
     <Content Include="Views\Rooms\Index.cshtml" />
+    <Content Include="Views\Staff_Treatment\Create.cshtml" />
+    <Content Include="Views\Staff_Treatment\Delete.cshtml" />
+    <Content Include="Views\Staff_Treatment\Details.cshtml" />
+    <Content Include="Views\Staff_Treatment\Edit.cshtml" />
+    <Content Include="Views\Staff_Treatment\Index.cshtml" />
+    <Content Include="Views\Proffesion_CauseType\Create.cshtml" />
+    <Content Include="Views\Proffesion_CauseType\Delete.cshtml" />
+    <Content Include="Views\Proffesion_CauseType\Details.cshtml" />
+    <Content Include="Views\Proffesion_CauseType\Edit.cshtml" />
+    <Content Include="Views\Proffesion_CauseType\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
