@@ -56,15 +56,9 @@ namespace THIS_Hospital
         [ForeignKey(name: "RoomRefID")]
         public virtual Room Room { get; set; }
 
-        // Många till många
-        public ICollection<Cause> Causes { get; set; }
-
-
-        // --------Construktor-----------
-        public Patient()
-        {
-           this.Causes = new HashSet<Cause>();
-        }
+        public int? CauseRefID { get; set; }
+        [ForeignKey(name: "CauseRefID")]
+        public virtual Cause Cause { get; set; }
 
 
 

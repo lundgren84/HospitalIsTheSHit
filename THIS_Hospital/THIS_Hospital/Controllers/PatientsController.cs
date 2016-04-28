@@ -59,7 +59,7 @@ namespace THIS_Hospital.Controllers
             }
 
             ViewBag.RoomRefID = new SelectList(db.Rooms, "RoomID", "RoomID", patient.RoomRefID);
-            ViewBag.StaffRefID = new SelectList(db._Staff, "StaffID", "Name", patient.StaffRefID);
+            ViewBag.StaffRefID = new SelectList(db._Staff, "StaffID", "FName", patient.StaffRefID);
             return View(patient);
         }
 
@@ -76,7 +76,7 @@ namespace THIS_Hospital.Controllers
                 return HttpNotFound();
             }
             ViewBag.RoomRefID = new SelectList(db.Rooms, "RoomID", "RoomID", patient.RoomRefID);
-            ViewBag.StaffRefID = new SelectList(db._Staff, "StaffID", "Name", patient.StaffRefID);
+            ViewBag.StaffRefID = new SelectList(db._Staff, "StaffID", "FName", patient.StaffRefID);
             return View(patient);
         }
 
@@ -94,7 +94,7 @@ namespace THIS_Hospital.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.RoomRefID = new SelectList(db.Rooms, "RoomID", "RoomID", patient.RoomRefID);
-            ViewBag.StaffRefID = new SelectList(db._Staff, "StaffID", "Name", patient.StaffRefID);
+            ViewBag.StaffRefID = new SelectList(db._Staff, "StaffID", "FName", patient.StaffRefID);
             return View(patient);
         }
 

@@ -10,10 +10,11 @@ namespace THIS_Hospital
     public class Room
     {
         //------------------------------------------------      
-        [Display(Name = "Room nr")]
-        public int RoomID { get; set; }    
-    
+       
+        public int RoomID { get; set; }
 
+        [Display(Name = "Room nr")]
+        public int RoomNr { get; set; }
         //------------------------------------------------  
         public bool Avalible { get; set; }
 
