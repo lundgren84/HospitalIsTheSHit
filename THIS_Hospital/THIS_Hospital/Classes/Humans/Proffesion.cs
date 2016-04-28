@@ -14,6 +14,7 @@ namespace THIS_Hospital
 
         //---------Properties--------------
         [Required]
+        [Display(Name = "Proffesion")]
         public string Profession_Name { get; set; }
 
      
