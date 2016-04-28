@@ -17,7 +17,7 @@ namespace THIS_Hospital.Controllers
         // GET: Proffesion_CauseType
         public ActionResult Index()
         {
-            var proffesion_CauseType = db.Proffesion_CauseType.Include(p => p._CauseType).Include(p => p._Proffesion);
+            var proffesion_CauseType = db.Proffesion_CauseType.Include(p => p.CauseType).Include(p => p.Proffesion);
             return View(proffesion_CauseType.ToList());
         }
 
@@ -39,8 +39,8 @@ namespace THIS_Hospital.Controllers
         // GET: Proffesion_CauseType/Create
         public ActionResult Create()
         {
-            ViewBag.CauseTypeID = new SelectList(db._CauseType, "CauseTypeID", "CauseTypeName");
-            ViewBag.ProffesionID = new SelectList(db._Proffesion, "ProffesionID", "Profession_Name");
+            ViewBag.CauseTypeRefID = new SelectList(db._CauseType, "CauseTypeID", "CauseTypeName");
+            ViewBag.ProffesionRefID = new SelectList(db._Proffesion, "ProffesionID", "Profession_Name");
             return View();
         }
 
@@ -49,7 +49,7 @@ namespace THIS_Hospital.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ProffesionID,CauseTypeID")] Proffesion_CauseType proffesion_CauseType)
+        public ActionResult Create([Bind(Include = "ProffesionID,CauseTypeID,ProffesionRefID,CauseTypeRefID")] Proffesion_CauseType proffesion_CauseType)
         {
             if (ModelState.IsValid)
             {
@@ -58,8 +58,8 @@ namespace THIS_Hospital.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.CauseTypeID = new SelectList(db._CauseType, "CauseTypeID", "CauseTypeName", proffesion_CauseType.CauseTypeID);
-            ViewBag.ProffesionID = new SelectList(db._Proffesion, "ProffesionID", "Profession_Name", proffesion_CauseType.ProffesionID);
+            ViewBag.CauseTypeRefID = new SelectList(db._CauseType, "CauseTypeID", "CauseTypeName", proffesion_CauseType.CauseTypeRefID);
+            ViewBag.ProffesionRefID = new SelectList(db._Proffesion, "ProffesionID", "Profession_Name", proffesion_CauseType.ProffesionRefID);
             return View(proffesion_CauseType);
         }
 
@@ -75,8 +75,8 @@ namespace THIS_Hospital.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.CauseTypeID = new SelectList(db._CauseType, "CauseTypeID", "CauseTypeName", proffesion_CauseType.CauseTypeID);
-            ViewBag.ProffesionID = new SelectList(db._Proffesion, "ProffesionID", "Profession_Name", proffesion_CauseType.ProffesionID);
+            ViewBag.CauseTypeRefID = new SelectList(db._CauseType, "CauseTypeID", "CauseTypeName", proffesion_CauseType.CauseTypeRefID);
+            ViewBag.ProffesionRefID = new SelectList(db._Proffesion, "ProffesionID", "Profession_Name", proffesion_CauseType.ProffesionRefID);
             return View(proffesion_CauseType);
         }
 
@@ -85,7 +85,7 @@ namespace THIS_Hospital.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ProffesionID,CauseTypeID")] Proffesion_CauseType proffesion_CauseType)
+        public ActionResult Edit([Bind(Include = "ProffesionID,CauseTypeID,ProffesionRefID,CauseTypeRefID")] Proffesion_CauseType proffesion_CauseType)
         {
             if (ModelState.IsValid)
             {
@@ -93,8 +93,8 @@ namespace THIS_Hospital.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.CauseTypeID = new SelectList(db._CauseType, "CauseTypeID", "CauseTypeName", proffesion_CauseType.CauseTypeID);
-            ViewBag.ProffesionID = new SelectList(db._Proffesion, "ProffesionID", "Profession_Name", proffesion_CauseType.ProffesionID);
+            ViewBag.CauseTypeRefID = new SelectList(db._CauseType, "CauseTypeID", "CauseTypeName", proffesion_CauseType.CauseTypeRefID);
+            ViewBag.ProffesionRefID = new SelectList(db._Proffesion, "ProffesionID", "Profession_Name", proffesion_CauseType.ProffesionRefID);
             return View(proffesion_CauseType);
         }
 

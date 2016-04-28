@@ -19,6 +19,8 @@ namespace THIS_Hospital
         public string CauseName { get; set; }
 
         //-------F-Key------
-        public virtual CauseType CauseTypeID { get; set; }
+        public int? CauseTypeRefID { get; set; }
+        [ForeignKey(name: "CauseTypeRefID")]
+        public virtual CauseType CauseType { get; set; }
     }
 }

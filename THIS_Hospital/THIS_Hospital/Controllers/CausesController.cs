@@ -17,7 +17,8 @@ namespace THIS_Hospital.Controllers
         // GET: Causes
         public ActionResult Index()
         {
-            return View(db._Cause.ToList());
+            var _Cause = db._Cause.Include(c => c.CauseType);
+            return View(_Cause.ToList());
         }
 
         // GET: Causes/Details/5
@@ -38,6 +39,7 @@ namespace THIS_Hospital.Controllers
         // GET: Causes/Create
         public ActionResult Create()
         {
+            ViewBag.CauseTypeRefID = new SelectList(db._CauseType, "CauseTypeID", "CauseTypeName");
             return View();
         }
 
@@ -46,7 +48,7 @@ namespace THIS_Hospital.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CauseID,CauseName")] Cause cause)
+        public ActionResult Create([Bind(Include = "CauseID,CauseName,CauseTypeRefID")] Cause cause)
         {
             if (ModelState.IsValid)
             {
@@ -55,6 +57,7 @@ namespace THIS_Hospital.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.CauseTypeRefID = new SelectList(db._CauseType, "CauseTypeID", "CauseTypeName", cause.CauseTypeRefID);
             return View(cause);
         }
 
@@ -70,6 +73,7 @@ namespace THIS_Hospital.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.CauseTypeRefID = new SelectList(db._CauseType, "CauseTypeID", "CauseTypeName", cause.CauseTypeRefID);
             return View(cause);
         }
 
@@ -78,7 +82,7 @@ namespace THIS_Hospital.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "CauseID,CauseName")] Cause cause)
+        public ActionResult Edit([Bind(Include = "CauseID,CauseName,CauseTypeRefID")] Cause cause)
         {
             if (ModelState.IsValid)
             {
@@ -86,6 +90,7 @@ namespace THIS_Hospital.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.CauseTypeRefID = new SelectList(db._CauseType, "CauseTypeID", "CauseTypeName", cause.CauseTypeRefID);
             return View(cause);
         }
 

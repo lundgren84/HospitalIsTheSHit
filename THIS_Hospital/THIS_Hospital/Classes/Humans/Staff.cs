@@ -26,7 +26,7 @@ namespace THIS_Hospital
         [Display(Name = "Phone Number")]
         public string PhoneNR { get; set; }
         [Display(Name = "Social Security Number")]
-        [StringLength(10)]
+        [StringLength(10, ErrorMessage = "Only 10 numbers")]
         public string SSN { get; set; }
         [Display(Name = "Hire date")]
         [DataType(DataType.Date)]
@@ -36,9 +36,15 @@ namespace THIS_Hospital
         { get { return FName + " " + LName; } }
 
         // ----------F-Keys------------
-        public  Proffesion _Proffesion { get; set; }
-        public  Department _Department { get; set; }
-        public virtual ICollection<Treatment> Treatments { get; set; }
+        public int? ProffesionRefID { get; set; }
+        [ForeignKey(name: "ProffesionRefID")]
+        public virtual Proffesion Proffesion { get; set; }
+
+        public int? DepartmentRefID { get; set; }
+        [ForeignKey(name: "DepartmentRefID")]
+        public virtual Department Department { get; set; }
+
+        public ICollection<Treatment> Treatments { get; set; }
 
         //-----------Construktor-------
         public Staff()

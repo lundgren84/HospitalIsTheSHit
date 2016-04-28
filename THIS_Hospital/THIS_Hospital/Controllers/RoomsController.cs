@@ -46,7 +46,7 @@ namespace THIS_Hospital.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "RoomID,RoomNr,Avalible,department")] Room room)
+        public ActionResult Create([Bind(Include = "RoomID,RoomNr,Avalible")] Room room)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace THIS_Hospital.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "RoomID,RoomNr,Avalible,department")] Room room)
+        public ActionResult Edit([Bind(Include = "RoomID,RoomNr,Avalible")] Room room)
         {
             if (ModelState.IsValid)
             {

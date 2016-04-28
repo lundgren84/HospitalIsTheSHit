@@ -19,7 +19,7 @@ namespace THIS_Hospital
         public bool Avalible { get; set; }
 
         //------------------------------------------------  
-        public virtual Department department { get; set; }
+        public virtual Department Department { get; set; }
 
     }
 }

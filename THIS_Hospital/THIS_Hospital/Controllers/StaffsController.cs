@@ -17,7 +17,8 @@ namespace THIS_Hospital.Controllers
         // GET: Staffs
         public ActionResult Index()
         {
-            return View(db._Staff.ToList());
+            var _Staff = db._Staff.Include(s => s.Department).Include(s => s.Proffesion);
+            return View(_Staff.ToList());
         }
 
         // GET: Staffs/Details/5
@@ -38,6 +39,8 @@ namespace THIS_Hospital.Controllers
         // GET: Staffs/Create
         public ActionResult Create()
         {
+            ViewBag.DepartmentRefID = new SelectList(db.Departments, "DepartmentID", "DepartmentName");
+            ViewBag.ProffesionRefID = new SelectList(db._Proffesion, "ProffesionID", "Profession_Name");
             return View();
         }
 
@@ -46,7 +49,7 @@ namespace THIS_Hospital.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "StaffID,FName,LName,Adress,PhoneNR,SSN,HireDate")] Staff staff)
+        public ActionResult Create([Bind(Include = "StaffID,FName,LName,Adress,PhoneNR,SSN,HireDate,ProffesionRefID,DepartmentRefID")] Staff staff)
         {
             if (ModelState.IsValid)
             {
@@ -55,6 +58,8 @@ namespace THIS_Hospital.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.DepartmentRefID = new SelectList(db.Departments, "DepartmentID", "DepartmentName", staff.DepartmentRefID);
+            ViewBag.ProffesionRefID = new SelectList(db._Proffesion, "ProffesionID", "Profession_Name", staff.ProffesionRefID);
             return View(staff);
         }
 
@@ -70,6 +75,8 @@ namespace THIS_Hospital.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.DepartmentRefID = new SelectList(db.Departments, "DepartmentID", "DepartmentName", staff.DepartmentRefID);
+            ViewBag.ProffesionRefID = new SelectList(db._Proffesion, "ProffesionID", "Profession_Name", staff.ProffesionRefID);
             return View(staff);
         }
 
@@ -78,7 +85,7 @@ namespace THIS_Hospital.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "StaffID,FName,LName,Adress,PhoneNR,SSN,HireDate")] Staff staff)
+        public ActionResult Edit([Bind(Include = "StaffID,FName,LName,Adress,PhoneNR,SSN,HireDate,ProffesionRefID,DepartmentRefID")] Staff staff)
         {
             if (ModelState.IsValid)
             {
@@ -86,6 +93,8 @@ namespace THIS_Hospital.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.DepartmentRefID = new SelectList(db.Departments, "DepartmentID", "DepartmentName", staff.DepartmentRefID);
+            ViewBag.ProffesionRefID = new SelectList(db._Proffesion, "ProffesionID", "Profession_Name", staff.ProffesionRefID);
             return View(staff);
         }
 

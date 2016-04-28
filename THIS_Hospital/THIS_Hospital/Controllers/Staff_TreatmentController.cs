@@ -18,7 +18,7 @@ namespace THIS_Hospital.Controllers
         // GET: Staff_Treatment
         public ActionResult Index()
         {
-            var staff_Treatment = db.Staff_Treatment.Include(s => s._Staff).Include(s => s._Treatment);
+            var staff_Treatment = db.Staff_Treatment.Include(s => s.Staff).Include(s => s.Treatment);
             return View(staff_Treatment.ToList());
         }
 
@@ -40,8 +40,8 @@ namespace THIS_Hospital.Controllers
         // GET: Staff_Treatment/Create
         public ActionResult Create()
         {
-            ViewBag.StaffID = new SelectList(db._Staff, "StaffID", "FName");
-            ViewBag.TreatmentID = new SelectList(db._Treatment, "TreatmentID", "TreatmentID");
+            ViewBag.StaffRefID = new SelectList(db._Staff, "StaffID", "FName");
+            ViewBag.TreatmentRefID = new SelectList(db._Treatment, "TreatmentID", "TreatmentID");
             return View();
         }
 
@@ -50,7 +50,7 @@ namespace THIS_Hospital.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "StaffID,TreatmentID")] Staff_Treatment staff_Treatment)
+        public ActionResult Create([Bind(Include = "StaffID,TreatmentID,TreatmentRefID,StaffRefID")] Staff_Treatment staff_Treatment)
         {
             if (ModelState.IsValid)
             {
@@ -59,8 +59,8 @@ namespace THIS_Hospital.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.StaffID = new SelectList(db._Staff, "StaffID", "FName", staff_Treatment.StaffID);
-            ViewBag.TreatmentID = new SelectList(db._Treatment, "TreatmentID", "TreatmentID", staff_Treatment.TreatmentID);
+            ViewBag.StaffRefID = new SelectList(db._Staff, "StaffID", "FName", staff_Treatment.StaffRefID);
+            ViewBag.TreatmentRefID = new SelectList(db._Treatment, "TreatmentID", "TreatmentID", staff_Treatment.TreatmentRefID);
             return View(staff_Treatment);
         }
 
@@ -76,8 +76,8 @@ namespace THIS_Hospital.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.StaffID = new SelectList(db._Staff, "StaffID", "FName", staff_Treatment.StaffID);
-            ViewBag.TreatmentID = new SelectList(db._Treatment, "TreatmentID", "TreatmentID", staff_Treatment.TreatmentID);
+            ViewBag.StaffRefID = new SelectList(db._Staff, "StaffID", "FName", staff_Treatment.StaffRefID);
+            ViewBag.TreatmentRefID = new SelectList(db._Treatment, "TreatmentID", "TreatmentID", staff_Treatment.TreatmentRefID);
             return View(staff_Treatment);
         }
 
@@ -86,7 +86,7 @@ namespace THIS_Hospital.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "StaffID,TreatmentID")] Staff_Treatment staff_Treatment)
+        public ActionResult Edit([Bind(Include = "StaffID,TreatmentID,TreatmentRefID,StaffRefID")] Staff_Treatment staff_Treatment)
         {
             if (ModelState.IsValid)
             {
@@ -94,8 +94,8 @@ namespace THIS_Hospital.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.StaffID = new SelectList(db._Staff, "StaffID", "FName", staff_Treatment.StaffID);
-            ViewBag.TreatmentID = new SelectList(db._Treatment, "TreatmentID", "TreatmentID", staff_Treatment.TreatmentID);
+            ViewBag.StaffRefID = new SelectList(db._Staff, "StaffID", "FName", staff_Treatment.StaffRefID);
+            ViewBag.TreatmentRefID = new SelectList(db._Treatment, "TreatmentID", "TreatmentID", staff_Treatment.TreatmentRefID);
             return View(staff_Treatment);
         }
 

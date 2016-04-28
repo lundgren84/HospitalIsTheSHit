@@ -13,7 +13,13 @@ namespace THIS_Hospital
         public int ProffesionID { get; set; }
         [Key, Column(Order = 1)]
         public int CauseTypeID { get; set; }
-        public virtual Proffesion _Proffesion { get; set; }
-        public virtual CauseType _CauseType { get; set; }
+
+        public int? ProffesionRefID { get; set; }
+        [ForeignKey(name: "ProffesionRefID")]
+        public virtual Proffesion Proffesion { get; set; }
+
+        public int? CauseTypeRefID { get; set; }
+        [ForeignKey(name: "CauseTypeRefID")]
+        public virtual CauseType CauseType { get; set; }
     }
 }

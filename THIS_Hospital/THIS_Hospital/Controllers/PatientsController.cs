@@ -17,7 +17,8 @@ namespace THIS_Hospital.Controllers
         // GET: Patients
         public ActionResult Index()
         {
-            return View(db._Patient.ToList());
+            var _Patient = db._Patient.Include(p => p.Room).Include(p => p.Staff);
+            return View(_Patient.ToList());
         }
 
         // GET: Patients/Details/5
@@ -38,6 +39,8 @@ namespace THIS_Hospital.Controllers
         // GET: Patients/Create
         public ActionResult Create()
         {
+            ViewBag.RoomRefID = new SelectList(db.Rooms, "RoomID", "RoomID");
+            ViewBag.StaffRefID = new SelectList(db._Staff, "StaffID", "FName");
             return View();
         }
 
@@ -46,7 +49,7 @@ namespace THIS_Hospital.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "PatientID,FName,LName,Adress,PhoneNR,SSN,CeckInHospital")] Patient patient)
+        public ActionResult Create([Bind(Include = "PatientID,FName,LName,Adress,PhoneNR,SSN,CeckInHospital,StaffRefID,RoomRefID")] Patient patient)
         {
             if (ModelState.IsValid)
             {
@@ -55,6 +58,8 @@ namespace THIS_Hospital.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.RoomRefID = new SelectList(db.Rooms, "RoomID", "RoomID", patient.RoomRefID);
+            ViewBag.StaffRefID = new SelectList(db._Staff, "StaffID", "FName", patient.StaffRefID);
             return View(patient);
         }
 
@@ -70,6 +75,8 @@ namespace THIS_Hospital.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.RoomRefID = new SelectList(db.Rooms, "RoomID", "RoomID", patient.RoomRefID);
+            ViewBag.StaffRefID = new SelectList(db._Staff, "StaffID", "FName", patient.StaffRefID);
             return View(patient);
         }
 
@@ -78,7 +85,7 @@ namespace THIS_Hospital.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "PatientID,FName,LName,Adress,PhoneNR,SSN,CeckInHospital")] Patient patient)
+        public ActionResult Edit([Bind(Include = "PatientID,FName,LName,Adress,PhoneNR,SSN,CeckInHospital,StaffRefID,RoomRefID")] Patient patient)
         {
             if (ModelState.IsValid)
             {
@@ -86,6 +93,8 @@ namespace THIS_Hospital.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.RoomRefID = new SelectList(db.Rooms, "RoomID", "RoomID", patient.RoomRefID);
+            ViewBag.StaffRefID = new SelectList(db._Staff, "StaffID", "FName", patient.StaffRefID);
             return View(patient);
         }
 
