@@ -3,29 +3,44 @@
 }
 
 <div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <h1>Hospital</h1>
+    <p class="lead">This Hospital Database is AWSOME</p>
+    <p><a href="http://google.se" class="btn btn-primary btn-lg">Google &raquo;</a></p>
 </div>
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Getting started</h2>
+        <h2>Stuff</h2>
         <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+           @Html.ActionLink("Patient>>  ", "Index", "Patients")
+            @Html.ActionLink("Staff>>  ", "Index", "Staffs")
+            @Html.ActionLink("Proffesion>>  ", "Index", "Proffesions")
+            @Html.ActionLink("Prescription>>  ", "Index", "Prescriptions")
+            @Html.ActionLink("Treatment>>  ", "Index", "Treatments")
+            @Html.ActionLink("TreatmentStatus>>  ", "Index", "TreatmentStatus")
+            @Html.ActionLink("WhatsDone>>  ", "Index", "WhatsDones")
         </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+      
     </div>
     <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+        <h2>More Stuff</h2>
+        <p>
+            @Html.ActionLink("Cause>>  ", "Index", "Causes")
+            @Html.ActionLink("CauseType>>  ", "Index", "CauseTypes")
+            @Html.ActionLink("Department>>  ", "Index", "Departments")
+            @Html.ActionLink("Drug>>  ", "Index", "Drugs")
+            @Html.ActionLink("DrugType>>  ", "Index", "DrugTypes")
+            @Html.ActionLink("Room>>  ", "Index", "Rooms")
+        </p>
         <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
     </div>
     <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+        <h2>Manny to manny</h2>
+        <p>
+            @Html.ActionLink("Staff Treatments>>  ", "Index", "Staff_Treatments")
+            @Html.ActionLink("Proffesion CauseType>>  ", "Index", "Proffesion_CauseTypes")
+           
+        </p>
         <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
     </div>
 </div>

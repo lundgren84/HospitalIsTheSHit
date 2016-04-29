@@ -17,12 +17,14 @@ namespace HWI
         [DataType(DataType.Date)]
         public DateTime HireDate { get; set; }
 
-
+        public int? ProffesionRefID { get; set; }
+        [ForeignKey("ProffesionRefID")]
+        public virtual Proffesion Proffesion { get; set; }
 
         //public virtual ICollection<Treatment> Treatments { get; set; }
 
         ////-----------Construktor-------
-        
+
         //public Staff()
         //{
         //    this.Treatments = new HashSet<Treatment>();

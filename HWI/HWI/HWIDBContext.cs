@@ -30,8 +30,6 @@ namespace HWI
         public DbSet<Prescription> Prescriptions { get; set; }  
         public System.Data.Entity.DbSet<HWI.CauseType> CauseTypes { get; set; }
 
-
-
-        
+        public System.Data.Entity.DbSet<HWI.Proffesion_CauseType> Proffesion_CauseType { get; set; }
     }
 }
