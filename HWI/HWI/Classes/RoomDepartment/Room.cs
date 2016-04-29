@@ -18,10 +18,12 @@ namespace HWI
 
         //------------------------------------------------  
         public bool Avalible { get; set; }
-        
+
 
         //------------------------------------------------  
 
+        public int? DepartmentRefID { get; set; }
+        [ForeignKey("DepartmentRefID")]
         public virtual Department department { get; set; }
        
         

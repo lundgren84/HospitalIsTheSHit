@@ -41,7 +41,7 @@ namespace HWI.Controllers
         {
             ViewBag._CauseRefID = new SelectList(db.Causes, "CauseID", "CauseName");
             ViewBag._StaffRefID = new SelectList(db.Persons, "PersonID", "FName");
-            ViewBag.RoomRefID = new SelectList(db.Rooms, "RoomID", "RoomID");
+            ViewBag.RoomRefID = new SelectList(db.Rooms, "RoomID", "RoomNr");
             return View();
         }
 
@@ -61,7 +61,7 @@ namespace HWI.Controllers
 
             ViewBag._CauseRefID = new SelectList(db.Causes, "CauseID", "CauseName", patient._CauseRefID);
             ViewBag._StaffRefID = new SelectList(db.Persons, "PersonID", "FName", patient._StaffRefID);
-            ViewBag.RoomRefID = new SelectList(db.Rooms, "RoomID", "RoomID", patient.RoomRefID);
+            ViewBag.RoomRefID = new SelectList(db.Rooms, "RoomID", "RoomNr", patient.RoomRefID);
             return View(patient);
         }
 
@@ -79,7 +79,7 @@ namespace HWI.Controllers
             }
             ViewBag._CauseRefID = new SelectList(db.Causes, "CauseID", "CauseName", patient._CauseRefID);
             ViewBag._StaffRefID = new SelectList(db.Persons, "PersonID", "FName", patient._StaffRefID);
-            ViewBag.RoomRefID = new SelectList(db.Rooms, "RoomID", "RoomID", patient.RoomRefID);
+            ViewBag.RoomRefID = new SelectList(db.Rooms, "RoomID", "RoomNr", patient.RoomRefID);
             return View(patient);
         }
 
@@ -98,7 +98,7 @@ namespace HWI.Controllers
             }
             ViewBag._CauseRefID = new SelectList(db.Causes, "CauseID", "CauseName", patient._CauseRefID);
             ViewBag._StaffRefID = new SelectList(db.Persons, "PersonID", "FName", patient._StaffRefID);
-            ViewBag.RoomRefID = new SelectList(db.Rooms, "RoomID", "RoomID", patient.RoomRefID);
+            ViewBag.RoomRefID = new SelectList(db.Rooms, "RoomID", "RoomNr", patient.RoomRefID);
             return View(patient);
         }
 

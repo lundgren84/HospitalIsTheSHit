@@ -16,6 +16,10 @@ namespace HWI
         [Display(Name = "Hire date")]
         [DataType(DataType.Date)]
         public DateTime HireDate { get; set; }
+        //Full name
+        [Display(Name = "Staff Name")]
+        public string StaffName
+        { get { return FName + " " + LName; } }
 
         public int? ProffesionRefID { get; set; }
         [ForeignKey("ProffesionRefID")]

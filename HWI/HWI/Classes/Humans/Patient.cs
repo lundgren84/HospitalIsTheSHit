@@ -28,6 +28,9 @@ namespace HWI
         public int? _CauseRefID { get; set; }
         [ForeignKey(name: "_CauseRefID")]
         public virtual Cause _Cause { get; set; }
-
+        //Full name
+        [Display(Name = "Patient Name")]
+        public string PatientName
+        { get { return FName + " " + LName; } }
     }
 }
