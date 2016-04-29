@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace THIS_Hospital
 {
@@ -11,20 +13,16 @@ namespace THIS_Hospital
     {
         public DrugType()
         {
-            this.Drougs = new HashSet<Drug>();
+            this.Drugs = new HashSet<Drug>();
         }
 
         public int DrugTypeID { get; set; } //Prymary key
+        [Display(Name = "Drug Type")]
         public string Desecription { get; set; }
 
 
-        public ICollection<Drug> Drougs { get; set; }
-        //public ICollection<Prescription> Prescriptions { get; set; }
-
-        //public int DrugTypeId { get; set; } //Prymary key
-        //public string Desecription { get; set; }
-
-        //public virtual Drug Drug { get; set; } //ForeignKey
+        public ICollection<Drug> Drugs { get; set; }
+ 
 
     }
 }

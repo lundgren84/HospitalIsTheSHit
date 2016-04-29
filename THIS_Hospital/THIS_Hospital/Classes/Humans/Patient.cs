@@ -25,37 +25,40 @@ namespace THIS_Hospital
         [Display(Name = "Last Name")]
         public string LName { get; set; }
         //Adress
+        [Required]
         public string Adress { get; set; }
         //Phone nr
+        [Required]
         [Display(Name = "Phone Number")]
         public string PhoneNR { get; set; }
         //Social Security Number
+        [Required]
         [Display(Name = "Social Security Number")]
-        [StringLength(10)]
+        [StringLength(10,ErrorMessage ="Only 10 numbers")]
         public string SSN { get; set; }
         //Time checked in to hospital
+        [Required]
         [DataType(DataType.Date)]
         public DateTime CeckInHospital { get; set; }
         //Full name
-        [Display(Name = "Full Name")]
+        [Required]
+        [Column(Order = 0)]
+        [Display(Name = "Patient Name")]
         public string Name
-        { get { return FName + " " + LName; } }
+        { get { return LName + ", " + FName; } }
 
         //-----------F-Keys------------
-      
-        public Staff _Staff { get; set; }
-       
-        public virtual Room _Room { get; set; }
+        public int? StaffRefID { get; set; }
+        [ForeignKey(name: "StaffRefID")]
+        public virtual Staff Staff { get; set; }
 
-        // Många till många
-        public virtual ICollection<Cause> Causes { get; set; }
+        public int? RoomRefID { get; set; }
+        [ForeignKey(name: "RoomRefID")]
+        public virtual Room Room { get; set; }
 
-
-        // --------Construktor-----------
-        public Patient()
-        {
-           this.Causes = new HashSet<Cause>();
-        }
+        public int? CauseRefID { get; set; }
+        [ForeignKey(name: "CauseRefID")]
+        public virtual Cause Cause { get; set; }
 
 
 

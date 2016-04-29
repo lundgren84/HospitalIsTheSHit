@@ -9,17 +9,19 @@ namespace THIS_Hospital
 {
     public class Room
     {
-        //------------------------------------------------  
+        //------------------------------------------------      
+       
         public int RoomID { get; set; }
 
-        //------------------------------------------------       
+        [Display(Name = "Room nr")]
         public int RoomNr { get; set; }
-
         //------------------------------------------------  
         public bool Avalible { get; set; }
 
         //------------------------------------------------  
-        public virtual Department department { get; set; }
+        public int? DepartmentRefID { get; set; }
+        [ForeignKey(name: "DepartmentRefID")]
+        public virtual Department Department { get; set; }
 
     }
 }

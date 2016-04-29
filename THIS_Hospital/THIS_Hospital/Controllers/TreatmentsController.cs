@@ -39,9 +39,9 @@ namespace THIS_Hospital.Controllers
         // GET: Treatments/Create
         public ActionResult Create()
         {
-            ViewBag.PatientID = new SelectList(db._Patient, "PatientID", "FName");
-            ViewBag.TreatmentStatusID = new SelectList(db._Treatmentstatus, "TreatmentStatusID", "Status");
-            ViewBag.WhatsDoneID = new SelectList(db._WhatsDone, "WhatsDoneID", "Description");
+            ViewBag.PatientRefID = new SelectList(db._Patient, "PatientID", "FName");
+            ViewBag.TreatmentStatusRefID = new SelectList(db._Treatmentstatus, "TreatmentStatusID", "Status");
+            ViewBag.WhatsDoneRefID = new SelectList(db._WhatsDone, "WhatsDoneID", "Description");
             return View();
         }
 
@@ -50,7 +50,7 @@ namespace THIS_Hospital.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "TreatmentID,Date,StillAlive,PatientID,WhatsDoneID,TreatmentStatusID")] Treatment treatment)
+        public ActionResult Create([Bind(Include = "TreatmentID,Date,StillAlive,PatientRefID,WhatsDoneRefID,TreatmentStatusRefID")] Treatment treatment)
         {
             if (ModelState.IsValid)
             {
@@ -59,9 +59,9 @@ namespace THIS_Hospital.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.PatientID = new SelectList(db._Patient, "PatientID", "FName", treatment.PatientID);
-            ViewBag.TreatmentStatusID = new SelectList(db._Treatmentstatus, "TreatmentStatusID", "Status", treatment.TreatmentStatusID);
-            ViewBag.WhatsDoneID = new SelectList(db._WhatsDone, "WhatsDoneID", "Description", treatment.WhatsDoneID);
+            ViewBag.PatientRefID = new SelectList(db._Patient, "PatientID", "FName", treatment.PatientRefID);
+            ViewBag.TreatmentStatusRefID = new SelectList(db._Treatmentstatus, "TreatmentStatusID", "Status", treatment.TreatmentStatusRefID);
+            ViewBag.WhatsDoneRefID = new SelectList(db._WhatsDone, "WhatsDoneID", "Description", treatment.WhatsDoneRefID);
             return View(treatment);
         }
 
@@ -77,9 +77,9 @@ namespace THIS_Hospital.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.PatientID = new SelectList(db._Patient, "PatientID", "FName", treatment.PatientID);
-            ViewBag.TreatmentStatusID = new SelectList(db._Treatmentstatus, "TreatmentStatusID", "Status", treatment.TreatmentStatusID);
-            ViewBag.WhatsDoneID = new SelectList(db._WhatsDone, "WhatsDoneID", "Description", treatment.WhatsDoneID);
+            ViewBag.PatientRefID = new SelectList(db._Patient, "PatientID", "FName", treatment.PatientRefID);
+            ViewBag.TreatmentStatusRefID = new SelectList(db._Treatmentstatus, "TreatmentStatusID", "Status", treatment.TreatmentStatusRefID);
+            ViewBag.WhatsDoneRefID = new SelectList(db._WhatsDone, "WhatsDoneID", "Description", treatment.WhatsDoneRefID);
             return View(treatment);
         }
 
@@ -88,7 +88,7 @@ namespace THIS_Hospital.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "TreatmentID,Date,StillAlive,PatientID,WhatsDoneID,TreatmentStatusID")] Treatment treatment)
+        public ActionResult Edit([Bind(Include = "TreatmentID,Date,StillAlive,PatientRefID,WhatsDoneRefID,TreatmentStatusRefID")] Treatment treatment)
         {
             if (ModelState.IsValid)
             {
@@ -96,9 +96,9 @@ namespace THIS_Hospital.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.PatientID = new SelectList(db._Patient, "PatientID", "FName", treatment.PatientID);
-            ViewBag.TreatmentStatusID = new SelectList(db._Treatmentstatus, "TreatmentStatusID", "Status", treatment.TreatmentStatusID);
-            ViewBag.WhatsDoneID = new SelectList(db._WhatsDone, "WhatsDoneID", "Description", treatment.WhatsDoneID);
+            ViewBag.PatientRefID = new SelectList(db._Patient, "PatientID", "FName", treatment.PatientRefID);
+            ViewBag.TreatmentStatusRefID = new SelectList(db._Treatmentstatus, "TreatmentStatusID", "Status", treatment.TreatmentStatusRefID);
+            ViewBag.WhatsDoneRefID = new SelectList(db._WhatsDone, "WhatsDoneID", "Description", treatment.WhatsDoneRefID);
             return View(treatment);
         }
 

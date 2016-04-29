@@ -11,9 +11,15 @@ namespace THIS_Hospital
     {
         [Key, Column(Order = 0)]
         public int ProffesionID { get; set; }
+        public virtual Proffesion Proffesion { get; set; }
+
         [Key, Column(Order = 1)]
         public int CauseTypeID { get; set; }
-        public virtual Proffesion _Proffesion { get; set; }
-        public virtual CauseType _CauseType { get; set; }
+        public virtual CauseType CauseType { get; set; }
+
+
+
+
+
     }
 }

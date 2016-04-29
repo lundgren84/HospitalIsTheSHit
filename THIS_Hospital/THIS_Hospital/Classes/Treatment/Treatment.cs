@@ -26,19 +26,22 @@ namespace THIS_Hospital
         public bool StillAlive { get; set; }
 
         //------------------------------------------------  
-        public int PatientID { get; set; }
+        public int? PatientRefID { get; set; }
+        [ForeignKey(name: "PatientRefID")]
         public virtual Patient Patient { get; set;}
 
         //------------------------------------------------
-        public int WhatsDoneID { get; set; }
+        public int? WhatsDoneRefID { get; set; }
+        [ForeignKey(name: "WhatsDoneRefID")]
         public virtual WhatsDone whatsDone { get; set; }
 
         //------------------------------------------------
-        public int TreatmentStatusID { get; set; }     
+         public int? TreatmentStatusRefID { get; set; }
+        [ForeignKey(name: "TreatmentStatusRefID")]     
         public virtual TreatmentStatus TreatmentStatus { get; set; }
 
         //-----------------------------------------------
-        public virtual ICollection<Staff> Staffs { get; set; }
+        public ICollection<Staff> Staffs { get; set; }
 
     }
 }

@@ -18,7 +18,7 @@ namespace THIS_Hospital.Controllers
         // GET: Staff_Treatment
         public ActionResult Index()
         {
-            var staff_Treatment = db.Staff_Treatment.Include(s => s._Staff).Include(s => s._Treatment);
+            var staff_Treatment = db.Staff_Treatment.Include(s => s.Staff).Include(s => s.Treatment);
             return View(staff_Treatment.ToList());
         }
 
@@ -40,7 +40,7 @@ namespace THIS_Hospital.Controllers
         // GET: Staff_Treatment/Create
         public ActionResult Create()
         {
-            ViewBag.StaffID = new SelectList(db._Staff, "StaffID", "FName");
+            ViewBag.StaffID = new SelectList(db._Staff, "StaffID", "Name");
             ViewBag.TreatmentID = new SelectList(db._Treatment, "TreatmentID", "TreatmentID");
             return View();
         }
@@ -59,7 +59,7 @@ namespace THIS_Hospital.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.StaffID = new SelectList(db._Staff, "StaffID", "FName", staff_Treatment.StaffID);
+            ViewBag.StaffID = new SelectList(db._Staff, "StaffID", "Name", staff_Treatment.StaffID);
             ViewBag.TreatmentID = new SelectList(db._Treatment, "TreatmentID", "TreatmentID", staff_Treatment.TreatmentID);
             return View(staff_Treatment);
         }
@@ -76,7 +76,7 @@ namespace THIS_Hospital.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.StaffID = new SelectList(db._Staff, "StaffID", "FName", staff_Treatment.StaffID);
+            ViewBag.StaffID = new SelectList(db._Staff, "StaffID", "Name", staff_Treatment.StaffID);
             ViewBag.TreatmentID = new SelectList(db._Treatment, "TreatmentID", "TreatmentID", staff_Treatment.TreatmentID);
             return View(staff_Treatment);
         }
@@ -94,7 +94,7 @@ namespace THIS_Hospital.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.StaffID = new SelectList(db._Staff, "StaffID", "FName", staff_Treatment.StaffID);
+            ViewBag.StaffID = new SelectList(db._Staff, "StaffID", "Name", staff_Treatment.StaffID);
             ViewBag.TreatmentID = new SelectList(db._Treatment, "TreatmentID", "TreatmentID", staff_Treatment.TreatmentID);
             return View(staff_Treatment);
         }

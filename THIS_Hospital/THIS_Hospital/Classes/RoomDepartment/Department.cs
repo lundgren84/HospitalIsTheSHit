@@ -15,6 +15,7 @@ namespace THIS_Hospital
         //------------------------------------------------  
 
         [StringLength(20)]
+        [Display(Name = "Department")]
         public string DepartmentName { get; set; }
 
     }

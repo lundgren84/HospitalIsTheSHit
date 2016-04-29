@@ -17,7 +17,8 @@ namespace THIS_Hospital.Controllers
         // GET: Drugs
         public ActionResult Index()
         {
-            return View(db.Drugs.ToList());
+            var drugs = db.Drugs.Include(d => d.DrugType);
+            return View(drugs.ToList());
         }
 
         // GET: Drugs/Details/5
@@ -38,6 +39,7 @@ namespace THIS_Hospital.Controllers
         // GET: Drugs/Create
         public ActionResult Create()
         {
+            ViewBag.DrugTypeRefID = new SelectList(db.DrugTypes, "DrugTypeID", "Desecription");
             return View();
         }
 
@@ -46,7 +48,7 @@ namespace THIS_Hospital.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "DrugID,Description")] Drug drug)
+        public ActionResult Create([Bind(Include = "DrugID,Description,DrugTypeRefID")] Drug drug)
         {
             if (ModelState.IsValid)
             {
@@ -55,6 +57,7 @@ namespace THIS_Hospital.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.DrugTypeRefID = new SelectList(db.DrugTypes, "DrugTypeID", "Desecription", drug.DrugTypeRefID);
             return View(drug);
         }
 
@@ -70,6 +73,7 @@ namespace THIS_Hospital.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.DrugTypeRefID = new SelectList(db.DrugTypes, "DrugTypeID", "Desecription", drug.DrugTypeRefID);
             return View(drug);
         }
 
@@ -78,7 +82,7 @@ namespace THIS_Hospital.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "DrugID,Description")] Drug drug)
+        public ActionResult Edit([Bind(Include = "DrugID,Description,DrugTypeRefID")] Drug drug)
         {
             if (ModelState.IsValid)
             {
@@ -86,6 +90,7 @@ namespace THIS_Hospital.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.DrugTypeRefID = new SelectList(db.DrugTypes, "DrugTypeID", "Desecription", drug.DrugTypeRefID);
             return View(drug);
         }
 

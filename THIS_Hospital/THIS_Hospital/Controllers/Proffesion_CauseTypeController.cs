@@ -17,7 +17,7 @@ namespace THIS_Hospital.Controllers
         // GET: Proffesion_CauseType
         public ActionResult Index()
         {
-            var proffesion_CauseType = db.Proffesion_CauseType.Include(p => p._CauseType).Include(p => p._Proffesion);
+            var proffesion_CauseType = db.Proffesion_CauseType.Include(p => p.CauseType).Include(p => p.Proffesion);
             return View(proffesion_CauseType.ToList());
         }
 
