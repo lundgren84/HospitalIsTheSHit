@@ -39,7 +39,7 @@ namespace HWI.Controllers
         // GET: Treatments/Create
         public ActionResult Create()
         {
-            ViewBag.PatientRefID = new SelectList(db.Persons, "PersonID", "FName");
+            ViewBag.PatientRefID = new SelectList(db.Patients, "PersonID", "Name");
             ViewBag.TreatmentStatusRefID = new SelectList(db.TreatmentStatus, "TreatmentStatusID", "Status");
             ViewBag.WhatsDoneRefID = new SelectList(db.WhatsDones, "WhatsDoneID", "Description");
             return View();
@@ -59,7 +59,7 @@ namespace HWI.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.PatientRefID = new SelectList(db.Persons, "PersonID", "FName", treatment.PatientRefID);
+            ViewBag.PatientRefID = new SelectList(db.Patients, "PersonID", "Name", treatment.PatientRefID);
             ViewBag.TreatmentStatusRefID = new SelectList(db.TreatmentStatus, "TreatmentStatusID", "Status", treatment.TreatmentStatusRefID);
             ViewBag.WhatsDoneRefID = new SelectList(db.WhatsDones, "WhatsDoneID", "Description", treatment.WhatsDoneRefID);
             return View(treatment);
@@ -77,7 +77,7 @@ namespace HWI.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.PatientRefID = new SelectList(db.Persons, "PersonID", "FName", treatment.PatientRefID);
+            ViewBag.PatientRefID = new SelectList(db.Patients, "PersonID", "Name", treatment.PatientRefID);
             ViewBag.TreatmentStatusRefID = new SelectList(db.TreatmentStatus, "TreatmentStatusID", "Status", treatment.TreatmentStatusRefID);
             ViewBag.WhatsDoneRefID = new SelectList(db.WhatsDones, "WhatsDoneID", "Description", treatment.WhatsDoneRefID);
             return View(treatment);

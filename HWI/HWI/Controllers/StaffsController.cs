@@ -28,7 +28,7 @@ namespace HWI.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Staff staff = db.Persons.Find(id)as Staff;
+            Staff staff = db.Persons.Find(id) as Staff;
             if (staff == null)
             {
                 return HttpNotFound();

@@ -40,8 +40,8 @@ namespace HWI.Controllers
         public ActionResult Create()
         {
             ViewBag.DrugRefID = new SelectList(db.Drugs, "DrugID", "Description");
-            ViewBag.PatientRefID = new SelectList(db.Persons, "PersonID", "FName");
-            ViewBag.StaffRefID = new SelectList(db.Persons, "PersonID", "FName");
+            ViewBag.PatientRefID = new SelectList(db.Patients, "PersonID", "PatientName");
+            ViewBag.StaffRefID = new SelectList(db.Staffs, "PersonID", "StaffName");
             return View();
         }
 
@@ -60,8 +60,8 @@ namespace HWI.Controllers
             }
 
             ViewBag.DrugRefID = new SelectList(db.Drugs, "DrugID", "Description", prescription.DrugRefID);
-            ViewBag.PatientRefID = new SelectList(db.Persons, "PersonID", "FName", prescription.PatientRefID);
-            ViewBag.StaffRefID = new SelectList(db.Persons, "PersonID", "FName", prescription.StaffRefID);
+            ViewBag.PatientRefID = new SelectList(db.Patients, "PersonID", "Name", prescription.PatientRefID);
+            ViewBag.StaffRefID = new SelectList(db.Staffs, "PersonID", "Name", prescription.StaffRefID);
             return View(prescription);
         }
 
@@ -78,8 +78,8 @@ namespace HWI.Controllers
                 return HttpNotFound();
             }
             ViewBag.DrugRefID = new SelectList(db.Drugs, "DrugID", "Description", prescription.DrugRefID);
-            ViewBag.PatientRefID = new SelectList(db.Persons, "PersonID", "FName", prescription.PatientRefID);
-            ViewBag.StaffRefID = new SelectList(db.Persons, "PersonID", "FName", prescription.StaffRefID);
+            ViewBag.PatientRefID = new SelectList(db.Patients, "PersonID", "Name", prescription.PatientRefID);
+            ViewBag.StaffRefID = new SelectList(db.Staffs, "PersonID", "Name", prescription.StaffRefID);
             return View(prescription);
         }
 
@@ -97,8 +97,8 @@ namespace HWI.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.DrugRefID = new SelectList(db.Drugs, "DrugID", "Description", prescription.DrugRefID);
-            ViewBag.PatientRefID = new SelectList(db.Persons, "PersonID", "FName", prescription.PatientRefID);
-            ViewBag.StaffRefID = new SelectList(db.Persons, "PersonID", "FName", prescription.StaffRefID);
+            ViewBag.PatientRefID = new SelectList(db.Patients, "PersonID", "Name", prescription.PatientRefID);
+            ViewBag.StaffRefID = new SelectList(db.Staffs, "PersonID", "Name", prescription.StaffRefID);
             return View(prescription);
         }
 

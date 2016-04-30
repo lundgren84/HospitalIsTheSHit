@@ -36,6 +36,10 @@ namespace HWI
         [Display(Name = "Social Security Number")]
         [StringLength(10)]
         public string SSN { get; set; }
-        
+
+        //Full name
+        [Display(Name = "Full Name")]
+        public string Name
+        { get { return FName + " " + LName; } }
     }
 }

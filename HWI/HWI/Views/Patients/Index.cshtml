@@ -30,10 +30,10 @@
             @Html.DisplayNameFor(model => model._Cause.CauseName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model._Staff.FName)
+            @Html.DisplayNameFor(model => model._Staff.StaffName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Room.RoomID)
+            @Html.DisplayNameFor(model => model.Room.RoomNr)
         </th>
         <th></th>
     </tr>
@@ -59,10 +59,10 @@
             @Html.DisplayFor(modelItem => item._Cause.CauseName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item._Staff.FName)
+            @Html.DisplayFor(modelItem => item._Staff.StaffName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Room.RoomID)
+            @Html.DisplayFor(modelItem => item.Room.RoomNr)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.PersonID }) |
