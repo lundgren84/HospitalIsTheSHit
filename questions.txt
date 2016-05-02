@@ -1,11 +1,11 @@
 
 ----------STORED PROCEDURES--------------------------------
 
-* Wich doctor has the highest treatment - sucsses rate? 
-* Wich doctor has the highest treatment - fail rate?
-* Wich doctor is Assigned to the most patients?
-* Wich doctor has performed most treatments between date-A and date-B?
-* Wich doctor is the has been employed longest? 
+* Wich doctor has the highest treatment - sucsses rate? //jacc	
+* Wich doctor has the highest treatment - fail rate?//jacc	
+* Wich doctor is Assigned to the most patients?//jacc	
+* Wich doctor has performed most treatments between date-A and date-B?//jacc	
+* Wich doctor is the has been employed longest? //jacc	
 
 * Wich doctor is assigned to "this" patient
 * wich Patients is assigned to "this" doctor
