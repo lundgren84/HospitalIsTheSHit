@@ -1,0 +1,38 @@
+
+----------STORED PROCEDURES--------------------------------
+
+* Wich doctor has the highest treatment - sucsses rate? 
+* Wich doctor has the highest treatment - fail rate?
+* Wich doctor is Assigned to the most patients?
+* Wich doctor has performed most treatments between date-A and date-B?
+* Wich doctor is the has been employed longest? 
+
+* Wich doctor is assigned to "this" patient
+* wich Patients is assigned to "this" doctor
+
+
+* what medications is presccribed to this patien? (AKA. Show this Patiens Prescripton)
+* when was this patient checked in? 
+* what room is this patient assigned to? 
+* wich treatment / s is this Patient assigned to?
+* who will perform this Patients treatments and what are they gonna do? 
+
+
+* how many patiens has been "harvested"? 
+* how many patients has died? 
+* how many bla bla bla bal im hungry
+
+
+-------------Possible Transactions------------------------
+____________________________________________________
+[ Check in a patient and make treatment apointment ]
+____________________________________________________
+--- insert new patient into table 
+--- assign Couse
+--- assign Doctor
+
+--- insert patient, doctor, Date into Treatment-Table
+ 
+
+
+
