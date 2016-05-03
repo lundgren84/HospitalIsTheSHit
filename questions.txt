@@ -14,7 +14,6 @@ DONE * what medications is presccribed to this patien? (AKA. Show this Patiens P
 DONE * when was this patient checked in? 
 DONE * what room is this patient assigned to? 
 DONE * wich treatment / s is this Patient assigned to? // Henke
-* who will perform this Patients treatments and what are they gonna do? 
 DONE * How manny % on heas causetype?
 
 * how many patiens has been "harvested"? 
