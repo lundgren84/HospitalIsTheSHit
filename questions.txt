@@ -7,7 +7,7 @@
 * Wich doctor has performed most treatments between date-A and date-B?//jacc	
 * Wich doctor is the has been employed longest? //jacc	
 
-* Wich doctor is assigned to "this" patient
+Henke * Wich doctor is assigned to "this" patient
 Hampus * wich Patients is assigned to "this" doctor
 
 
