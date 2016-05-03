@@ -21,7 +21,7 @@ DONE * How manny % on heas causetype?
 DONE * how many patients has died? // Hampus
 * how many bla bla bla bal im hungry
 ------------------- TRIGGERS------------------------
-*
+HAMPUS * Block Staff to preform tratment they cant preform
 
 
 -------------Possible Transactions------------------------
