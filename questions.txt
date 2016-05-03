@@ -1,10 +1,10 @@
 
-----------STORED PROCEDURES--------------------------------
+-----------------------------STORED PROCEDURES--------------------------------
 
-* Wich doctor has the highest treatment - sucsses rate? //jacc	               |-DONE-|
-* Wich doctor has the highest treatment - fail rate?//jacc	                   |-DONE-|
-* Wich doctor has performed most treatments between date-A and date-B?//jacc	
-* Wich doctor is the has been employed longest? //jacc	
+//jacc	|-DONE-| * Wich doctor has the highest treatment - sucsses rate?                             
+//jacc	|-DONE-| * Wich doctor has the highest treatment - fail rate?                                 
+//jacc	|-DONE-| * Wich doctor has performed most treatments between date-A and date-B? 
+//jacc	|-DONE-| * Wich doctor is the has been employed longest?                                
 
 * Wich doctor is assigned to "this" patient
 DONE * wich Patients is assigned to "this" doctor
@@ -18,8 +18,8 @@ DONE * How manny % on heas causetype?
 
 * how many patiens has been "harvested"? 
 DONE * how many patients has died? // Hampus
-* how many bla bla bla bal im hungry
-------------------- TRIGGERS------------------------
+DONE * how many bla bla bla bal im hungry //Preben
+------------------- TRIGGERS------------------------------
 HAMPUS * Block Staff to preform tratment they cant preform
 
 
@@ -36,3 +36,4 @@ ____________________________________________________
 
 
 
+                                                         
