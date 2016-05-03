@@ -25,7 +25,7 @@ DONE * How manny % on heas causetype?4
 
 * how many patiens has been "harvested"? 
 DONE * how many patients has died? // Hampus
-DONE * how many bla bla bla bal im hungry //Preben
+DONE * how many bla bla bla bal im hungry //Karsten
 ------------------- TRIGGERS------------------------------
 HAMPUS * Block Staff to preform tratment they cant preform
 DONE ChangeRoomStatus - Sets room to NOT Available when patient checks in
