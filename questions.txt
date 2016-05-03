@@ -23,7 +23,7 @@ DONE * How manny % on heas causetype?4
     * List patients that require long-term tretment
     * List patients that require singel tretment
     * List patients that requier Quarantine
-    * What Drug is the most prescripted of all time, possibly a top 10 list
+    DONE * What Drug is the most prescripted of all time, possibly a top 10 list
     * List the Doktor with higest favorability
     * List the Doktor with lowest favorability
 
