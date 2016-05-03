@@ -21,7 +21,7 @@ DONE * How manny % on heas causetype?4
     * wich cause has caused most deaths during treatment
     * List patients that require long-term tretment
     * List patients that require singel tretment
-
+    * List patients that requier Quarantine
 
 * how many patiens has been "harvested"? 
 DONE * how many patients has died? // Hampus
