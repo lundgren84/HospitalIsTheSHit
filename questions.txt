@@ -6,7 +6,6 @@
 //jacc	|-DONE-| * Wich doctor has performed most treatments between date-A and date-B? 
 //jacc	|-DONE-| * Wich doctor is the has been employed longest?                                
 
-* Wich doctor is assigned to "this" patient
 DONE * wich Patients is assigned to "this" doctor
 DONE * Which Staff is assigned to THIS treatmentID //Henke
 
