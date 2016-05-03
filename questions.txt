@@ -46,8 +46,15 @@ ____________________________________________________
 --- assign Doctor
 
 --- insert patient, doctor, Date into Treatment-Table
- 
 
+
+|--------------------------------AUDIT TABLE---------------------------------| // Jacc
+|                                ¨¨¨¨¨¨¨¨¨¨¨                                 |
+| Patient checkoutaudittable With triggers  (autofill, autoremove on death)  |
+|                                                                            |
+| * wich patient has been in most times between thi and that date            |
+| * wich patient has                                                         |
+|----------------------------------------------------------------------------|
 
 
                                                          
