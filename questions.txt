@@ -18,6 +18,8 @@ DONE * How manny % on heas causetype?4
     * Wich cause has the highest chance to be treated succsesfully? (aka, wich cause has the highest "succses rate") 
     * Wich doctor is best at treating "this Cause" 
     * wich cause has caused most deaths during treatment
+    
+    
     * List patients that require long-term tretment
     * List patients that require singel tretment
     * List patients that requier Quarantine
