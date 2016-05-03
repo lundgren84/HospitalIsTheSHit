@@ -21,10 +21,10 @@ DONE * how many patients has died? // Hampus
 DONE * how many bla bla bla bal im hungry //Preben
 ------------------- TRIGGERS------------------------------
 HAMPUS * Block Staff to preform tratment they cant preform
-DONE ChangeRoomStatus - Sets room to NOT Available when patient checks in
-DONE RemovePerson - Room will be set to Available again
-DONE RoomAvailableForInsert - Checks if room is available when trying to check in patient
-DONE CantDieBefore - Can't be dead when arrived to hospital
+DONE  * ChangeRoomStatus         Sets room to NOT Available when patient checks in
+DONE  * RemovePerson             Room will be set to Available again
+DONE  * RoomAvailableForInsert   Checks if room is available when trying to check in patient
+DONE  * CantDieBefore            Can't be dead when arrived to hospital
 
 -------------Possible Transactions------------------------
 ____________________________________________________
