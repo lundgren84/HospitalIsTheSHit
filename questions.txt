@@ -8,12 +8,12 @@
 * Wich doctor is the has been employed longest? //jacc	
 
 * Wich doctor is assigned to "this" patient
-* wich Patients is assigned to "this" doctor
+ * wich Patients is assigned to "this" doctor
 
 
-* what medications is presccribed to this patien? (AKA. Show this Patiens Prescripton)
-* when was this patient checked in? 
-* what room is this patient assigned to? 
+DONE * what medications is presccribed to this patien? (AKA. Show this Patiens Prescripton)
+DONE * when was this patient checked in? 
+DONE * what room is this patient assigned to? 
 * wich treatment / s is this Patient assigned to?
 * who will perform this Patients treatments and what are they gonna do? 
 
