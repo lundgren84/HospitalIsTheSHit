@@ -19,7 +19,7 @@
 
 
 * how many patiens has been "harvested"? 
-* how many patients has died? 
+DONE * how many patients has died? // Hampus
 * how many bla bla bla bal im hungry
 
 
