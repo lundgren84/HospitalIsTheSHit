@@ -31,6 +31,8 @@ DONE-- Fråga6: visar alla patienter som livande ... visa ett patient som har su
      * List patients that require long-term tretment
      * List patients that require singel tretment
      * List patients that requier Quarantine
+
+DONE * Search Doctor with Patient SSN     
      
 DONE * What Drug is the most prescripted of all time, Top List
      * List the Doktor with higest favorability
