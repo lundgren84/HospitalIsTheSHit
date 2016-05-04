@@ -31,5 +31,7 @@ namespace HWI
         public System.Data.Entity.DbSet<HWI.CauseType> CauseTypes { get; set; }
 
         public System.Data.Entity.DbSet<HWI.Proffesion_CauseType> Proffesion_CauseType { get; set; }
+
+        public System.Data.Entity.DbSet<HWI.PatientCheckOutAuditTBL> PatientCheckOutAuditTBLs { get; set; }
     }
 }

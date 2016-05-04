@@ -27,14 +27,16 @@ namespace HWI
         [StringLength(50, ErrorMessage = " You cant have longer name then 50 chars!!")]
         [Display(Name = "Last Name")]
         public string LName { get; set; }
-   
+
         //Phone nr
+        [Required]
         [Display(Name = "Phone Number")]
         public string PhoneNR { get; set; }
 
         //Social Security Number
+        [Required]
         [Display(Name = "Social Security Number")]
-        [StringLength(10)]
+        [StringLength(11)]
         public string SSN { get; set; }
 
         //Full name

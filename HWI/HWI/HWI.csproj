@@ -201,6 +201,7 @@
     <Compile Include="Classes\Drugs\DrugType.cs" />
     <Compile Include="Classes\Drugs\Prescription.cs" />
     <Compile Include="Classes\ManyToMany\Proffesion_CauseType.cs" />
+    <Compile Include="Controllers\PatientCheckOutAuditTBLsController.cs" />
     <Compile Include="Classes\RoomDepartment\Department.cs" />
     <Compile Include="Classes\RoomDepartment\Room.cs" />
     <Compile Include="Classes\ManyToMany\Staff_Treatment.cs" />
@@ -237,6 +238,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Classes\PatientCheckOutAuditTBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -304,11 +306,6 @@
     <Content Include="Views\Proffesions\Details.cshtml" />
     <Content Include="Views\Proffesions\Edit.cshtml" />
     <Content Include="Views\Proffesions\Index.cshtml" />
-    <Content Include="Views\Staff_Treatment\Create.cshtml" />
-    <Content Include="Views\Staff_Treatment\Delete.cshtml" />
-    <Content Include="Views\Staff_Treatment\Details.cshtml" />
-    <Content Include="Views\Staff_Treatment\Edit.cshtml" />
-    <Content Include="Views\Staff_Treatment\Index.cshtml" />
     <Content Include="Views\Proffesion_CauseType\Create.cshtml" />
     <Content Include="Views\Proffesion_CauseType\Delete.cshtml" />
     <Content Include="Views\Proffesion_CauseType\Details.cshtml" />
@@ -364,16 +361,26 @@
     <Content Include="Views\Rooms\Details.cshtml" />
     <Content Include="Views\Rooms\Edit.cshtml" />
     <Content Include="Views\Rooms\Index.cshtml" />
-    <Content Include="Views\Patients\Create.cshtml" />
-    <Content Include="Views\Patients\Delete.cshtml" />
-    <Content Include="Views\Patients\Details.cshtml" />
-    <Content Include="Views\Patients\Edit.cshtml" />
-    <Content Include="Views\Patients\Index.cshtml" />
     <Content Include="Views\Staffs\Create.cshtml" />
     <Content Include="Views\Staffs\Delete.cshtml" />
     <Content Include="Views\Staffs\Details.cshtml" />
     <Content Include="Views\Staffs\Edit.cshtml" />
     <Content Include="Views\Staffs\Index.cshtml" />
+    <Content Include="Views\PatientCheckOutAuditTBLs\Create.cshtml" />
+    <Content Include="Views\PatientCheckOutAuditTBLs\Delete.cshtml" />
+    <Content Include="Views\PatientCheckOutAuditTBLs\Details.cshtml" />
+    <Content Include="Views\PatientCheckOutAuditTBLs\Edit.cshtml" />
+    <Content Include="Views\PatientCheckOutAuditTBLs\Index.cshtml" />
+    <Content Include="Views\Staff_Treatment\Create.cshtml" />
+    <Content Include="Views\Staff_Treatment\Delete.cshtml" />
+    <Content Include="Views\Staff_Treatment\Details.cshtml" />
+    <Content Include="Views\Staff_Treatment\Edit.cshtml" />
+    <Content Include="Views\Staff_Treatment\Index.cshtml" />
+    <Content Include="Views\Patients\Create.cshtml" />
+    <Content Include="Views\Patients\Delete.cshtml" />
+    <Content Include="Views\Patients\Details.cshtml" />
+    <Content Include="Views\Patients\Edit.cshtml" />
+    <Content Include="Views\Patients\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

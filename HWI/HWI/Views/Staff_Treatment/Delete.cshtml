@@ -12,11 +12,11 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model._Staff.StaffName)
+            @Html.DisplayNameFor(model => model._Staff.FName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model._Staff.StaffName)
+            @Html.DisplayFor(model => model._Staff.FName)
         </dd>
 
         <dt>
@@ -25,6 +25,14 @@
 
         <dd>
             @Html.DisplayFor(model => model._Treatment.TreatmentID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ResposibleDr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ResposibleDr)
         </dd>
 
     </dl>

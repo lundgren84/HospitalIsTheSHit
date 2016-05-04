@@ -17,6 +17,9 @@
         <th>
             @Html.DisplayNameFor(model => model._Treatment.TreatmentID)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ResposibleDr)
+        </th>
         <th></th>
     </tr>
 
@@ -27,6 +30,9 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item._Treatment.TreatmentID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ResposibleDr)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |

@@ -13,8 +13,11 @@ namespace HWI
      
 
         //Time checked in to hospital
+        [Required]
         [DataType(DataType.Date)]
-        public DateTime CeckInHospital { get; set; }
+        public DateTime CheckInHospital { get; set; }
+        [DataType(DataType.Date)]
+        public DateTime? CheckOut { get; set; }
 
         //-----------F-Keys------------
 

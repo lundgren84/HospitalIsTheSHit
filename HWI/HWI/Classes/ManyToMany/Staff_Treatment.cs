@@ -15,9 +15,8 @@ namespace HWI
 
 
         [Key, Column(Order = 1)]
-        public int PersonID { get; set; }
-
-
+        public int PersonID { get; set; }       
+        public bool ResposibleDr { get; set; }
         public virtual Staff _Staff { get; set; }
         public virtual Treatment _Treatment { get; set; }
 

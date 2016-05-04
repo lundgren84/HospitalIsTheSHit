@@ -50,15 +50,23 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CeckInHospital, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.CheckInHospital, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.CeckInHospital, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.CeckInHospital, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.CheckInHospital, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CheckInHospital, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.RoomRefID, "Room", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.CheckOut, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CheckOut, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CheckOut, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.RoomRefID, "RoomRefID", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("RoomRefID", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.RoomRefID, "", new { @class = "text-danger" })
@@ -66,7 +74,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model._StaffRefID, "Staff", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model._StaffRefID, "_StaffRefID", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("_StaffRefID", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model._StaffRefID, "", new { @class = "text-danger" })
@@ -74,7 +82,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model._CauseRefID, "Cause", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model._CauseRefID, "_CauseRefID", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("_CauseRefID", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model._CauseRefID, "", new { @class = "text-danger" })

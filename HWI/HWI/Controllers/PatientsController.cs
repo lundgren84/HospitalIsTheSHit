@@ -50,7 +50,7 @@ namespace HWI.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "PersonID,FName,LName,PhoneNR,SSN,CeckInHospital,RoomRefID,_StaffRefID,_CauseRefID")] Patient patient)
+        public ActionResult Create([Bind(Include = "PersonID,FName,LName,PhoneNR,SSN,CheckInHospital,CheckOut,RoomRefID,_StaffRefID,_CauseRefID")] Patient patient)
         {
             if (ModelState.IsValid)
             {
@@ -88,7 +88,7 @@ namespace HWI.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "PersonID,FName,LName,PhoneNR,SSN,CeckInHospital,RoomRefID,_StaffRefID,_CauseRefID")] Patient patient)
+        public ActionResult Edit([Bind(Include = "PersonID,FName,LName,PhoneNR,SSN,CheckInHospital,CheckOut,RoomRefID,_StaffRefID,_CauseRefID")] Patient patient)
         {
             if (ModelState.IsValid)
             {
