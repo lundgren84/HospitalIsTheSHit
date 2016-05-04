@@ -1,35 +1,35 @@
 
 -----------------------------STORED PROCEDURES--------------------------------
-
-//jacc	|-DONE-| * Wich doctor has the highest treatment - sucsses rate?                             
-//jacc	|-DONE-| * Wich doctor has the highest treatment - fail rate?                                 
-//jacc	|-DONE-| * Wich doctor has performed most treatments between date-A and date-B? 
-//jacc	|-DONE-| * Wich doctor is the has been employed longest?                                
+|-DONE-| * Wich doctor has the highest treatment - sucsses rate?                             
+|-DONE-| * Wich doctor has the highest treatment - fail rate?                                 
+|-DONE-| * Wich doctor has performed most treatments between date-A and date-B? 
+|-DONE-| * Wich doctor is the has been employed longest?                                
 
 DONE * wich Patients is assigned to "this" doctor
 DONE * Which Staff is assigned to THIS treatmentID //Henke
 
-DONE * what medications is presccribed to this patien? (AKA. Show this Patiens Prescripton)
+DONE * what medications is presccribed to this patient? (AKA. Show this Patiens Prescripton)
 DONE * when was this patient checked in? 
 DONE * what room is this patient assigned to? 
 DONE * wich treatment / s is this Patient assigned to? // Henke
-DONE * How manny % on heas causetype?4
+DONE * How manny % on heas causetype?
 
-    * Wich cause has the highest chance to be treated succsesfully? (aka, wich cause has the highest "succses rate") 
-    * Wich doctor is best at treating "this Cause" 
-    * wich cause has caused most deaths during treatment
+     * Wich cause has the highest chance to be treated succsesfully? (aka, wich cause has the highest "succses rate") 
+     * Wich doctor is best at treating "this Cause" 
+     * wich cause has caused most deaths during treatment
     
     
-    * List patients that require long-term tretment
-    * List patients that require singel tretment
-    * List patients that requier Quarantine
-    * What Drug is the most prescripted of all time, possibly a top 10 list
-    * List the Doktor with higest favorability
-    * List the Doktor with lowest favorability
-
-* how many patiens has been "harvested"? 
+     * List patients that require long-term tretment
+     * List patients that require singel tretment
+     * List patients that requier Quarantine
+     
+DONE * What Drug is the most prescripted of all time, Top List
+     * List the Doktor with higest favorability
+     * List the Doktor with lowest favorability
+ 
+     * how many patiens has been "harvested"? 
 DONE * how many patients has died? // Hampus
-DONE * how many bla bla bla bal im hungry //Karsten
+DONE * how many bla bla bla bal im hungry //Karsten Torbjer, psychic medium
 ------------------- TRIGGERS------------------------------
 HAMPUS * Block Staff to preform tratment they cant preform
 DONE ChangeRoomStatus - Sets room to NOT Available when patient checks in
@@ -48,10 +48,9 @@ ____________________________________________________
 --- insert patient, doctor, Date into Treatment-Table
 
 
-|--------------------------------AUDIT TABLE---------------------------------| // Jacc
+|--------------------------------AUDIT TABLE---------------------------------| 
 |                                ¨¨¨¨¨¨¨¨¨¨¨                                 |
 | Patient checkoutaudittable With triggers  (autofill, autoremove on death)  |
-|                                                                            |
 | * wich patient has been in most times between thi and that date            |
 | * wich patient has                                                         |
 |----------------------------------------------------------------------------|
