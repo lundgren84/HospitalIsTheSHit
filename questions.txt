@@ -47,6 +47,7 @@ DONE RoomAvailableForInsert - Checks if room is available when trying to check i
 DONE CantDieBefore - Can't be dead when arrived to hospital
 
 Yaser * Rooms cannot have same number
+Trigger * Double check that no multiple entries van be inserted 
 
 -------------Possible Transactions------------------------
 ____________________________________________________
