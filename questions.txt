@@ -46,6 +46,8 @@ DONE RemovePerson - Room will be set to Available again
 DONE RoomAvailableForInsert - Checks if room is available when trying to check in patient
 DONE CantDieBefore - Can't be dead when arrived to hospital
 
+Yaser * Rooms cannot have same number
+
 -------------Possible Transactions------------------------
 ____________________________________________________
 [ Check in a patient and make treatment apointment ]
