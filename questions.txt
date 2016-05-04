@@ -14,6 +14,15 @@ DONE * what room is this patient assigned to?
 DONE * wich treatment / s is this Patient assigned to? // Henke
 DONE * How manny % on heas causetype?
 
+Aveen----------
+DONE-- Fråga1: Lista alla drugs och dess attribute som inte är nycklar samt prescription och dem patientet som tår prescripted samt vilka staff ska träffa patient(people table)
+DONE-- Fråga2: Visa den rooms numer & a valibale från rooms table med  people (des)
+DONE -- Fråga3: Visa Date till Prescription som läkare har skrivit (med date som paramet)
+DONE-- Fråga4: visa Causes name som ett causetypes visar. ska kunna sökas namnet Caustypes (med causetype name paramet)
+DONE-- Fråga5: visa alla department name som har patienter
+DONE-- Fråga6: visar alla patienter som livande ... visa ett patient som har successful status och livande met nummer 1
+
+
      * Wich cause has the highest chance to be treated succsesfully? (aka, wich cause has the highest "succses rate") 
      * Wich doctor is best at treating "this Cause" 
      * wich cause has caused most deaths during treatment
