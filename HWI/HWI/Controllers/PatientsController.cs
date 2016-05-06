@@ -54,9 +54,11 @@ namespace HWI.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Persons.Add(patient);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+          
+                    db.Persons.Add(patient);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                          
             }
 
             ViewBag._CauseRefID = new SelectList(db.Causes, "CauseID", "CauseName", patient._CauseRefID);

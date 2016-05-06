@@ -39,7 +39,7 @@ namespace HWI.Controllers
         // GET: Staff_Treatment/Create
         public ActionResult Create()
         {
-            ViewBag.PersonID = new SelectList(db.Persons, "PersonID", "Name");
+            ViewBag.PersonID = new SelectList(db.Staffs, "PersonID", "Name");
             ViewBag.TreatmentID = new SelectList(db.Treatments, "TreatmentID", "TreatmentID");
             return View();
         }
@@ -58,7 +58,7 @@ namespace HWI.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.PersonID = new SelectList(db.Persons, "PersonID", "Name", staff_Treatment.PersonID);
+            ViewBag.PersonID = new SelectList(db.Staffs, "PersonID", "Name", staff_Treatment.PersonID);
             ViewBag.TreatmentID = new SelectList(db.Treatments, "TreatmentID", "TreatmentID", staff_Treatment.TreatmentID);
             return View(staff_Treatment);
         }
@@ -75,7 +75,7 @@ namespace HWI.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.PersonID = new SelectList(db.Persons, "PersonID", "Name", staff_Treatment.PersonID);
+            ViewBag.PersonID = new SelectList(db.Staffs, "PersonID", "Name", staff_Treatment.PersonID);
             ViewBag.TreatmentID = new SelectList(db.Treatments, "TreatmentID", "TreatmentID", staff_Treatment.TreatmentID);
             return View(staff_Treatment);
         }
@@ -93,7 +93,7 @@ namespace HWI.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.PersonID = new SelectList(db.Persons, "PersonID", "Name", staff_Treatment.PersonID);
+            ViewBag.PersonID = new SelectList(db.Staffs, "PersonID", "Name", staff_Treatment.PersonID);
             ViewBag.TreatmentID = new SelectList(db.Treatments, "TreatmentID", "TreatmentID", staff_Treatment.TreatmentID);
             return View(staff_Treatment);
         }
